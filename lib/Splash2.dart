@@ -6,6 +6,8 @@ import 'package:samplemay/MyHomePage.dart';
 import 'package:samplemay/Tables.dart';
 import 'package:splashscreen/splashscreen.dart';
 
+import 'flutterlist.dart';
+
 void main() {
   runApp(MaterialApp(home: SplashScreen2()));
 }
@@ -15,12 +17,23 @@ class SplashScreen2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return SplashScreen(
       seconds: 5,
-      navigateAfterSeconds: MyTable(),
-      title: const Text("Sample App",style: TextStyle(fontSize: 30),),
+      navigateAfterSeconds: MyList(),
+      title: const Text(
+        "Sample App",
+        style: TextStyle(fontSize: 30),
+      ),
       image: Image.asset("assets/images/teddy.jpg"),
       loaderColor: Colors.amberAccent,
       loadingText: const Text('Please Wait.......'),
       photoSize: 40,
+      gradientBackground: const LinearGradient(
+          begin: Alignment.bottomCenter,
+          end: Alignment.topRight,
+          colors: [
+            Colors.green,
+            Colors.yellow,
+            Colors.pink,
+          ]),
     );
   }
 }
