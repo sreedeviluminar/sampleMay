@@ -2,57 +2,57 @@ import 'package:flutter/material.dart';
 import 'package:samplemay/MyHomePage.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(MaterialApp(home: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
   final _form = GlobalKey<FormState>(); //for storing form state.
-
-//saving form after validation  //user defined function
-  void _saveForm() {
-    final isValid = _form.currentState!.validate();
-    if (!isValid) {
-      return;
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        body: Form(
-          key: _form, //assigning key to form
+    return Scaffold(
+      body: Form(
+        key: _form, //assigning key to form
 
-          child: ListView(
-            children: <Widget>[
-              TextFormField(
+        child: ListView(
+          children: <Widget>[
+            Container(
+              padding: EdgeInsets.all(20),
+              child: TextFormField(
                 decoration: const InputDecoration(
                     labelText: 'Email', border: OutlineInputBorder()),
                 validator: (text) {
-                  if (text == null || !(text.contains('@')) && text.isNotEmpty) {
+                  if (text == null || !(text.contains('@')) || text.isEmpty) {
                     return "Enter a valid email address!";
                   }
                   return null;
                 },
               ),
-              TextFormField(
-                decoration: const InputDecoration(labelText: 'Password'),
+            ),
+            Container(
+              padding: EdgeInsets.all(20),
+              child: TextFormField(
+                decoration: const InputDecoration(
+                    labelText: 'Password', border: OutlineInputBorder()),
                 validator: (text) {
-                  if (text == null || !(text.length <= 5) && text.isNotEmpty) {
+                  if (text == null || !(text.length <= 5) || text.isEmpty) {
                     return "Enter valid password atmost 5 characters!";
                   }
                   return null;
                 },
               ),
-              ElevatedButton(
-                  child: Text('Submit'),
-                  onPressed: () {
-                    _saveForm();
+            ),
+            ElevatedButton(
+                child: Text('Submit'),
+                onPressed: () {
+                  final isValid = _form.currentState!.validate();
+                  if (isValid) {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => MyHomePage()));
-                  })
-            ],
-          ),
+                  } else {
+                    print('not valid form');
+                  }
+                })
+          ],
         ),
       ),
     );
