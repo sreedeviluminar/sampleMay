@@ -29,8 +29,7 @@ class MyApp extends StatelessWidget {
                 decoration: const InputDecoration(
                     labelText: 'Email', border: OutlineInputBorder()),
                 validator: (text) {
-                  if (text == null ||
-                      !(text.contains('@')) && text.isNotEmpty) {
+                  if (text == null || !(text.contains('@')) && text.isNotEmpty) {
                     return "Enter a valid email address!";
                   }
                   return null;
