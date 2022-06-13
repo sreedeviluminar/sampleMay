@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:samplemay/MyHomePage.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:samplemay/registration.dart';
 
 void main() {
   runApp(MaterialApp(home: MyApp()));
@@ -49,9 +51,19 @@ class MyApp extends StatelessWidget {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => MyHomePage()));
                   } else {
-                    print('not valid form');
+                    Fluttertoast.showToast(
+                        msg: "Username / Password is Incorrect",
+                        gravity: ToastGravity.BOTTOM,
+                        backgroundColor: Colors.brown,
+                        fontSize: 16.0);
                   }
-                })
+                }),
+
+            TextButton(onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => RegistrationPage()));
+            },
+            child:Text( "Not a user? Register Here"),),
           ],
         ),
       ),
