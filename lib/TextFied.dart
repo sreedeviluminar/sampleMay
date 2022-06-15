@@ -10,7 +10,6 @@ void main() {
 class LoginPage extends StatelessWidget {
   String? input;
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
