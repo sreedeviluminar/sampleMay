@@ -13,7 +13,7 @@ class GridViewww extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.blueGrey[900],
-          title: Center(
+          title: const Center(
             child: Text(
               'Flutter GridView Demo',
               style: TextStyle(
@@ -25,21 +25,20 @@ class GridViewww extends StatelessWidget {
           ),
         ),
         body: GridView.count(
-          crossAxisCount: 4,
+          crossAxisCount: 3,
           crossAxisSpacing: 10.0,
           mainAxisSpacing: 10.0,
           shrinkWrap: true,
-          children: List.generate(4, (index) {
+          children: List.generate(20, (index) {
             return Padding(
               padding: const EdgeInsets.all(10.0),
               child: Container(
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   image: DecorationImage(
                     image: NetworkImage('https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'),
                     fit: BoxFit.cover,
                   ),
-                  borderRadius:
-                  BorderRadius.all(Radius.circular(100.0),),
+                  borderRadius: BorderRadius.all(Radius.circular(10.0),),
                 ),
               ),
             );
