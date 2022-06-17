@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
           title: Text(title),
         ),
         body: GridView.count(
-          crossAxisCount: 2,
+          crossAxisCount: 3,
           children: List.generate(100, (index) {
             return Center(
               child: Column(
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
                   Image.network(
                     'https://picsum.photos/500/500?random=$index',
                     width: 200,
-                    height: 222,
+                    height: 137,
                   ),
                   Text(
                     'Image $index',
