@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:staggered_grid_view_flutter/widgets/staggered_grid_view.dart';
+import 'package:staggered_grid_view_flutter/widgets/staggered_tile.dart';
 import 'package:transparent_image/transparent_image.dart';
 
 void main() {
@@ -56,7 +57,7 @@ class _MyStaggeredGridViewScreenState extends State<MyStaggeredGridViewScreen> {
               );
             },
             staggeredTileBuilder: (index) {
-              return StaggeredTile.count(1, index.isEven ? 1.4 : 1.9);
+              return StaggeredTile.count(1, index.isEven ? 1 : 3);
             }),
       ),
     );

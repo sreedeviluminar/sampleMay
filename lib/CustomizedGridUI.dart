@@ -43,7 +43,7 @@ class _MyHomePageState extends State<MyHomePage> {
         padding: const EdgeInsets.all(5.0),
         child: GridView.builder(
           gridDelegate:
-          SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
+          SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
           itemBuilder: (context, position) {
             return Padding(
                 padding: const EdgeInsets.all(10.0),
