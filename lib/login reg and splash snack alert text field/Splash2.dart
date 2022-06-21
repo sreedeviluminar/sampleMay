@@ -2,11 +2,9 @@ import 'dart:html';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:samplemay/MyHomePage.dart';
-import 'package:samplemay/Tables.dart';
 import 'package:splashscreen/splashscreen.dart';
 
-import 'flutterlist.dart';
+import '../grid and list/flutterlist.dart';
 
 void main() {
   runApp(MaterialApp(home: SplashScreen2()));

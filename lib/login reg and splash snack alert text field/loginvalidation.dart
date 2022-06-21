@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:samplemay/MyHomePage.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:samplemay/registration.dart';
+import 'package:samplemay/login%20reg%20and%20splash%20snack%20alert%20text%20field/MyHomePage.dart';
+import 'package:samplemay/login%20reg%20and%20splash%20snack%20alert%20text%20field/registration.dart';
 
 void main() {
   runApp(MaterialApp(home: MyApp()));
