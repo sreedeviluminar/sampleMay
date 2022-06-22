@@ -12,11 +12,11 @@ class Page extends StatefulWidget {
 }
 
 class _PageState extends State<Page> {
-  CustomAnimationControl control =
-      CustomAnimationControl.play; // state variable
+  CustomAnimationControl control = CustomAnimationControl.play; // state variable
 
   @override
   Widget build(BuildContext context) {
+
     return CustomAnimation<double>(
       control: control, // bind state variable to parameter
       tween: Tween(begin: -100.0, end: 100.0),
@@ -31,7 +31,7 @@ class _PageState extends State<Page> {
         // there is a button
         color: Colors.yellow,
         onPressed:
-        toggleDirection, // clicking button changes animation direction
+            toggleDirection, // clicking button changes animation direction
         child: const Text('Swap'),
       ),
     );
@@ -40,7 +40,8 @@ class _PageState extends State<Page> {
   void toggleDirection() {
     // toggle between control instructions
     setState(() {
-      control = (control == CustomAnimationControl.play)
+      control =
+      (control == CustomAnimationControl.play)
           ? CustomAnimationControl.playReverse
           : CustomAnimationControl.play;
     });

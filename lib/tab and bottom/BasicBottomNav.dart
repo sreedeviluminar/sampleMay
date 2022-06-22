@@ -50,12 +50,13 @@ class _BasicBottomNavBarState extends State<BasicBottomNavBar> {
           child: _pages.elementAt(_selectedIndex),
         ),
         bottomNavigationBar: BottomNavigationBar(
-          type: BottomNavigationBarType.fixed,
+        //  type: BottomNavigationBarType.fixed,
           selectedItemColor: Colors.pink,
           unselectedItemColor: Colors.yellow,
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
               icon: Icon(Icons.call),
+              backgroundColor: Colors.green,
               label: 'Calls',
             ),
             BottomNavigationBarItem(
@@ -66,10 +67,10 @@ class _BasicBottomNavBarState extends State<BasicBottomNavBar> {
               icon: Icon(Icons.chat),
               label: 'Chats',
             ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.chat),
-              label: 'Chats',
-            ),
+            // BottomNavigationBarItem(
+            //   icon: Icon(Icons.chat),
+            //   label: 'Chats',
+            // ),
           ],
           currentIndex: _selectedIndex,
           onTap: _onItemTapped,

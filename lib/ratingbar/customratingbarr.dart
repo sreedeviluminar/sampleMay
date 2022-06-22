@@ -37,7 +37,7 @@ class ExamplePage extends StatelessWidget {
           ),
           const SizedBox(height: 16),
           _buildDivider('Custom colors'),
-          RatingBar.readOnly(
+          const RatingBar.readOnly(
             isHalfAllowed: true,
             alignment: Alignment.center,
             filledIcon: Icons.star,
@@ -51,7 +51,7 @@ class ExamplePage extends StatelessWidget {
           ),
           const SizedBox(height: 16),
           _buildDivider('Custom icons'),
-          RatingBar.readOnly(
+          const RatingBar.readOnly(
             isHalfAllowed: true,
             alignment: Alignment.center,
             filledIcon: Icons.wb_sunny,
@@ -64,7 +64,7 @@ class ExamplePage extends StatelessWidget {
           ),
           const SizedBox(height: 16),
           _buildDivider('Vertical'),
-          RatingBar.readOnly(
+          const RatingBar.readOnly(
             direction: Axis.vertical,
             isHalfAllowed: true,
             alignment: Alignment.center,
@@ -76,7 +76,7 @@ class ExamplePage extends StatelessWidget {
           ),
           const SizedBox(height: 16),
           _buildDivider('Aligned left'),
-          RatingBar.readOnly(
+          const RatingBar.readOnly(
             isHalfAllowed: true,
             alignment: Alignment.centerLeft,
             filledIcon: Icons.face,
@@ -89,7 +89,7 @@ class ExamplePage extends StatelessWidget {
           ),
           const SizedBox(height: 16),
           _buildDivider('Aligned right'),
-          RatingBar.readOnly(
+          const RatingBar.readOnly(
             isHalfAllowed: true,
             alignment: Alignment.centerRight,
             filledIcon: Icons.star,
