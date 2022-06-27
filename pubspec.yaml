@@ -39,7 +39,8 @@ dependencies:
   google_nav_bar: ^5.0.6
   line_icons:
   custom_rating_bar:
-  simple_animations: 
+  simple_animations:
+  introduction_screen: ^3.0.2
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
