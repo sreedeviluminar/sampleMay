@@ -9,6 +9,7 @@ void main() {
 
 class MyApp extends StatelessWidget {
   final _form = GlobalKey<FormState>(); //for storing form state.
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,27 +44,32 @@ class MyApp extends StatelessWidget {
                 },
               ),
             ),
-            ElevatedButton(
-                child: Text('Submit'),
-                onPressed: () {
-                  final isValid = _form.currentState!.validate();
-                  if (isValid) {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => MyHomePage()));
-                  } else {
-                    Fluttertoast.showToast(
-                        msg: "Username / Password is Incorrect",
-                        gravity: ToastGravity.BOTTOM,
-                        backgroundColor: Colors.brown,
-                        fontSize: 16.0);
-                  }
-                }),
-
-            TextButton(onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => RegistrationPage()));
-            },
-            child:Text( "Not a user? Register Here"),),
+            Container(
+              padding: EdgeInsets.only(left: 50,right: 50),
+              child: ElevatedButton(
+                  child: Text('Submit'),
+                  onPressed: () {
+                    final isValid = _form.currentState!.validate();
+                    if (isValid) {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => MyHomePage()));
+                    } else {
+                      Fluttertoast.showToast(
+                          msg: "Username / Password is Incorrect",
+                          gravity: ToastGravity.BOTTOM,
+                          fontSize: 16.0);
+                    }
+                  }),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => RegistrationPage()));
+              },
+              child: Text("Not a user? Register Here"),
+            ),
           ],
         ),
       ),

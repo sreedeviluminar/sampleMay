@@ -25,6 +25,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+
   List menuList = [
     _MenuItem(Icons.verified_user, 'My Profile'),
     _MenuItem(Icons.autorenew, 'Book a Cab'),
@@ -43,14 +44,15 @@ class _MyHomePageState extends State<MyHomePage> {
         padding: const EdgeInsets.all(5.0),
         child: GridView.builder(
           gridDelegate:
-          SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+          SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
           itemBuilder: (context, position) {
             return Padding(
-                padding: const EdgeInsets.all(10.0),
+                padding: const EdgeInsets.all(2.0),
                 child: InkWell(
                     onTap: () {},
                     child: Center(
                       child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Center(
                             child: Card(
@@ -89,6 +91,7 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 
 class _MenuItem {
+
   final IconData icon;
   final String title;
 
