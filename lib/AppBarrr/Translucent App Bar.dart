@@ -15,7 +15,7 @@ class CustomAppBar extends StatelessWidget {
             icon: const Icon(Icons.arrow_back),
           ),
           title: const Text('CustomAppBar'),
-          backgroundColor: Color.fromARGB(255, 230, 200, 200),
+          backgroundColor: Colors.purple.withOpacity(0.6),
           elevation: 0,
           actions: [
             IconButton(onPressed: () {}, icon: const Icon(Icons.settings))
