@@ -181,8 +181,8 @@ class _AuthThreePageState extends State<AuthThreePage> {
                               child: Text("Signup",
                                   style: TextStyle(
                                     color: _formsIndex == 1
-                                        ? Colors.white
-                                        : Colors.black,
+                                        ? Colors.black
+                                        : Colors.white,
                                   )),
                               onPressed: () {
                                 setState(() {
@@ -250,14 +250,15 @@ class LoginForm extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 10.0),
-          RaisedButton(
-            color: Colors.red,
-            textColor: Colors.white,
-            elevation: 0,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20.0),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              primary: Colors.red,
+              elevation: 0,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(20.0),
+              ),
             ),
-            child: Text("Login"),
+            child: const Text("Login",style: TextStyle(color: Colors.white),),
             onPressed: () {},
           ),
         ],
