@@ -41,6 +41,7 @@ dependencies:
   custom_rating_bar:
   simple_animations:
   introduction_screen: ^3.0.2
+  font_awesome_flutter:
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
