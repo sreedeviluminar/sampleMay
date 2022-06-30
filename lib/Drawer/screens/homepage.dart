@@ -11,7 +11,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePage extends State<HomePage> {
-
   String mainProfilePic =
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3tX9GUY0RJdxvyvuX0zIx_PHafgmoLdm5Lg&usqp=CAU";
   String otherProfilePic =
@@ -24,8 +23,8 @@ class _HomePage extends State<HomePage> {
           title: Text("Navigation Drawer"),
         ),
         drawer: Theme(
-              data: Theme.of(context).copyWith(
-              canvasColor: Colors.orange,
+            data: Theme.of(context).copyWith(
+              canvasColor: Colors.purple,
             ),
             child: Drawer(
                 child: ListView(
@@ -35,11 +34,13 @@ class _HomePage extends State<HomePage> {
                   accountEmail: Text("johndoe@email.com"),
                   currentAccountPicture: GestureDetector(
                       child: CircleAvatar(
-                          backgroundImage: NetworkImage(mainProfilePic),
+                        backgroundImage: NetworkImage(mainProfilePic),
                       ),
                       onTap: () => print("Current User")),
-                      decoration: const BoxDecoration(
-                       // color: Colors.lightGreenAccent,
+                  decoration: const BoxDecoration(
+                    image: DecorationImage(
+                        image: AssetImage("assets/images/fullscreen.jpg"),
+                    fit: BoxFit.cover),
                   ),
                 ),
                 ListTile(
@@ -47,6 +48,7 @@ class _HomePage extends State<HomePage> {
                     trailing: Icon(Icons.menu),
                     onTap: () {
                       Navigator.of(context).pop();
+
                       Navigator.of(context).push(MaterialPageRoute(
                         builder: (BuildContext context) =>
                             OtherPage("Other Page"),
@@ -81,9 +83,6 @@ class _HomePage extends State<HomePage> {
                   onTap: () => Navigator.of(context).pop(),
                 ),
               ],
-            )
-            )
-        )
-    );
+            ))));
   }
 }

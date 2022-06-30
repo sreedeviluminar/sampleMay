@@ -42,6 +42,7 @@ dependencies:
   simple_animations:
   introduction_screen: ^3.0.2
   font_awesome_flutter:
+  cached_network_image:
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
