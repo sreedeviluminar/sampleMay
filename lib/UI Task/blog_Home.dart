@@ -9,6 +9,7 @@ void main() {
     home: BlogHomeOnePage(),
   ));
 }
+
 final List<Map> articles = [
   {
     "title": "How to Seem Like You Always Have Your Shot Together",
@@ -53,9 +54,8 @@ final List<Map> articles = [
 ];
 
 class BlogHomeOnePage extends StatelessWidget {
-
-  final Color primaryColor   = const Color(0xffFD6592);
-  final Color bgColor        = const Color(0xffF9E0E3);
+  final Color primaryColor = const Color(0xfED22192);
+  final Color bgColor = const Color(0xffa9E0E3);
   final Color secondaryColor = const Color(0xff324558);
 
   @override
@@ -71,13 +71,15 @@ class BlogHomeOnePage extends StatelessWidget {
             iconTheme: IconThemeData(color: secondaryColor),
             actionsIconTheme: IconThemeData(
               color: secondaryColor,
-            ), toolbarTextStyle: TextTheme(
+            ),
+            toolbarTextStyle: TextTheme(
               subtitle1: TextStyle(
                 color: secondaryColor,
                 fontSize: 20.0,
                 fontWeight: FontWeight.bold,
               ),
-            ).bodyText2, titleTextStyle: TextTheme(
+            ).bodyText2,
+            titleTextStyle: TextTheme(
               subtitle1: TextStyle(
                 color: secondaryColor,
                 fontSize: 20.0,
@@ -89,7 +91,10 @@ class BlogHomeOnePage extends StatelessWidget {
         child: Scaffold(
           appBar: AppBar(
             centerTitle: true,
-            title: const Text('Categories',style: TextStyle(color: Colors.black),),
+            title: const Text(
+              'Categories',
+              style: TextStyle(color: Colors.black),
+            ),
             leading: const Icon(Icons.category),
             actions: <Widget>[
               IconButton(
@@ -135,7 +140,7 @@ class BlogHomeOnePage extends StatelessWidget {
                   return _buildArticleItem(index);
                 },
                 separatorBuilder: (context, index) =>
-                const SizedBox(height: 16.0),
+                    const SizedBox(height: 16.0),
               ),
               const Text("Tab 2"),
               const Text("Tab 3"),
@@ -143,11 +148,10 @@ class BlogHomeOnePage extends StatelessWidget {
               const Text("Tab 5"),
             ],
           ),
-
           bottomNavigationBar: BottomNavigationBar(
             currentIndex: 1,
             type: BottomNavigationBarType.fixed,
-            items: const[
+            items: const [
               BottomNavigationBarItem(
                 icon: Icon(Icons.home),
                 label: "",
@@ -196,9 +200,9 @@ class BlogHomeOnePage extends StatelessWidget {
                   height: 100,
                   color: Colors.blue,
                   width: 80.0,
-                  child: const PNetworkImage(
-                    "https://static.vecteezy.com/system/resources/previews/000/201/215/original/vector-beach-vacations-background.jpg",
-                    fit: BoxFit.cover,
+                  child: const Image(
+                   image: NetworkImage("https://static.vecteezy.com/system/resources/previews/000/201/215/original/vector-beach-vacations-background.jpg",
+                   ),fit: BoxFit.cover,
                   ),
                 ),
                 const SizedBox(width: 20.0),
@@ -254,22 +258,23 @@ class BlogHomeOnePage extends StatelessWidget {
   }
 }
 
-
-class PNetworkImage extends StatelessWidget {
-  final String? image;
-  final BoxFit? fit;
-  final double? width,height;
-  const PNetworkImage(this.image, {Key? key,this.fit,this.height,this.width}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Image.network(
-      image!,
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      // placeholder: (context, url) => Center(child: CircularProgressIndicator()),
-      // errorWidget: (context, url, error) => Image.asset('assets/placeholder.jpg',fit: BoxFit.cover,),
-      fit: fit,
-      width: width,
-      height: height,
-    );
-  }
-}
+// class PNetworkImage extends StatelessWidget {
+//   final String? image;
+//   final BoxFit? fit;
+//   final double? width, height;
+//
+//   const PNetworkImage(this.image, {Key? key, this.fit, this.height, this.width})
+//       : super(key: key);
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return Image.network(
+//       image!,
+//       // placeholder: (context, url) => Center(child: CircularProgressIndicator()),
+//       // errorWidget: (context, url, error) => Image.asset('assets/placeholder.jpg',fit: BoxFit.cover,),
+//       fit: fit,
+//       width: width,
+//       height: height,
+//     );
+//   }
+// }
