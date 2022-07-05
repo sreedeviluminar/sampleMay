@@ -7,7 +7,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import '../lib/splashscreennn.dart';
+import 'package:samplemay/login%20reg%20and%20splash%20snack%20alert%20text%20field/splashscreennn.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
