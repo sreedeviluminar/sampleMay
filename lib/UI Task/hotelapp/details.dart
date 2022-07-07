@@ -24,8 +24,8 @@ class HotelDetailsPage extends StatelessWidget {
                 const SizedBox(height: 250),
                 const Padding(
                   padding: EdgeInsets.symmetric(horizontal:16.0),
-                  child: const Text(
-                    "Lux Hotel\nToronto",
+                  child: Text(
+                    "Crowne Plaza \nKochi, Kerala",
                     style: TextStyle(color: Colors.white, fontSize: 28.0, fontWeight: FontWeight.bold),
                   ),
                 ),
@@ -42,7 +42,7 @@ class HotelDetailsPage extends StatelessWidget {
                           borderRadius: BorderRadius.circular(20.0)),
                       child: const Text(
                         "8.4/85 reviews",
-                        style: const TextStyle(color: Colors.white, fontSize: 13.0),
+                        style: TextStyle(color: Colors.white, fontSize: 13.0),
                       ),
                     ),
                     const Spacer(),
@@ -95,7 +95,7 @@ class HotelDetailsPage extends StatelessWidget {
                                     child: Icon(Icons.location_on, size: 16.0, color: Colors.grey,)
                                   ),
                                   TextSpan(
-                                    text: "8 km to centrum"
+                                    text: "8 km to LuluMall"
                                   )
                                 ]), style: TextStyle(color: Colors.grey, fontSize: 12.0),)
                               ],
@@ -119,17 +119,20 @@ class HotelDetailsPage extends StatelessWidget {
                       const SizedBox(height: 30.0),
                       SizedBox(
                         width: double.infinity,
-                        child: RaisedButton(
-                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0)),
-                          color: Colors.purple,
-                          textColor: Colors.white,
-                          child: const Text("Book Now", style: const TextStyle(
-                            fontWeight: FontWeight.normal
-                          ),),
-                          padding: const EdgeInsets.symmetric(
-                            vertical: 16.0,
-                            horizontal: 32.0,
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0)),
+                            primary : Colors.purple,
+                            padding: const EdgeInsets.symmetric(
+                              vertical: 16.0,
+                              horizontal: 32.0,
+                            ),
                           ),
+                          child: const Text("Book Now", style: TextStyle(
+                            fontWeight: FontWeight.normal,
+                            color: Colors.white
+                          ),),
+
                           onPressed: () {},
                         ),
                       ),
@@ -140,13 +143,14 @@ class HotelDetailsPage extends StatelessWidget {
                       ),),
                       const SizedBox(height: 10.0),
                       const Text(
-                          "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione architecto autem quasi nisi iusto eius ex dolorum velit! Atque, veniam! Atque incidunt laudantium eveniet sint quod harum facere numquam molestias?", textAlign: TextAlign.justify, style: const TextStyle(
+                          "Crowne Plaza Kochi, Kerala, is an ideal staying place for both the professional and leisure travelers from across the world. It is placed amidst exotic surroundings that comprised of alluring attractions of the city. The hotel is blessed with excellent accommodation arrangements in the presence of fully furnished rooms and suites. The staying facilities are majestically complimented by the traditional Indian hospitality at this five-star property. Moreover, the extensive premises of the hotel consist of excellent arrangements for business and personal events.",
+                           textAlign: TextAlign.justify, style: TextStyle(
                             fontWeight: FontWeight.w300,
                             fontSize: 14.0
                           ),),
                       const SizedBox(height: 10.0),
                       const Text(
-                          "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione architecto autem quasi nisi iusto eius ex dolorum velit! Atque, veniam! Atque incidunt laudantium eveniet sint quod harum facere numquam molestias?", textAlign: TextAlign.justify, style: const TextStyle(
+                          "Crowne Plaza Kochi, Kerala", textAlign: TextAlign.justify, style: TextStyle(
                             fontWeight: FontWeight.w300,
                             fontSize: 14.0
                           ),),

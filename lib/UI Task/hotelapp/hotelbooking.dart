@@ -2,7 +2,9 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
 
-
+void main(){
+  runApp(MaterialApp(home: HotelBookingPage(),));
+}
 class Hotel {
   String? imageUrl;
   String? title;
@@ -137,7 +139,7 @@ class _HotelBookingPageState extends State<HotelBookingPage> {
                 children: <Widget>[
                   const Padding(
                     padding: EdgeInsets.symmetric(horizontal: 10.0),
-                    child: const Icon(
+                    child: Icon(
                       Icons.search,
                       size: 30.0,
                       color: Colors.grey,
@@ -207,8 +209,8 @@ class _HotelBookingPageState extends State<HotelBookingPage> {
                         width: 170.0,
                         decoration: BoxDecoration(
                           borderRadius: const BorderRadius.only(
-                            topLeft: const Radius.circular(10.0),
-                            topRight: const Radius.circular(10.0),
+                            topLeft: Radius.circular(10.0),
+                            topRight: Radius.circular(10.0),
                           ),
                           image: DecorationImage(
                             image: AssetImage(hotels[index].imageUrl!),
@@ -422,7 +424,7 @@ _hotelPackage(int index) {
                 child: const Center(
                   child: Text(
                     'Book Now',
-                    style: const TextStyle(
+                    style: TextStyle(
                         fontSize: 13.0,
                         color: Colors.white,
                         fontWeight: FontWeight.w600,
