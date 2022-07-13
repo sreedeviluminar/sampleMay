@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:samplemay/login%20reg%20and%20splash%20snack%20alert%20text%20field/MyHomePage.dart';
 
 void main() {
@@ -20,6 +21,8 @@ class SplashScreennState extends State<SplashScreenn> {
         const Duration(seconds: 3),
         () => Navigator.pushReplacement(
             context, MaterialPageRoute(builder: (context) => MyHomePage())));
+
+          SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
   }
 
   @override

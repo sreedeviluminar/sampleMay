@@ -1,5 +1,5 @@
-// main.dart
 import 'package:flutter/material.dart';
+import 'package:samplemay/grid%20and%20list/flutterlist.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
       home: const HomePage(),
       routes: {
         'settings': (BuildContext ctx) => const SettingsPage(),
+        'listpage': (BuildContext ct) => MyList(),
       },
     );
   }
@@ -28,24 +29,29 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Home'),
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(30),
-        child: Column(children: [
-          Text("Route Name: ${ModalRoute.of(context)?.settings.name}"),
-          const SizedBox(
-            height: 30,
+        appBar: AppBar(
+          title: const Text('Home'),
+        ),
+        body: Center(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              TextButton(
+                  onPressed: () {
+                    Navigator.of(context).pushNamed('settings');
+                  },
+                  child: const Text('Register')),
+              const SizedBox(
+                width: 30,
+              ),
+              TextButton(
+                  onPressed: () {
+                    Navigator.of(context).pushNamed('listpage');
+                  },
+                  child: const Text('Login')),
+            ],
           ),
-          TextButton(
-              onPressed: () {
-                Navigator.of(context).pushNamed('settings');
-              },
-              child: const Text('Go To Settings'))
-        ]),
-      ),
-    );
+        ));
   }
 }
 

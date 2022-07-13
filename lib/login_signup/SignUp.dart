@@ -59,7 +59,7 @@ class SignupPage extends StatelessWidget {
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 20,
                         ),
                         Text(
@@ -69,13 +69,13 @@ class SignupPage extends StatelessWidget {
                             color: Colors.grey[700],
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 30,
                         )
                       ],
                     ),
                     Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 40),
+                      padding: const EdgeInsets.symmetric(horizontal: 40),
                       child: Column(
                         children: [
                           makeInput(label: "Email"),
