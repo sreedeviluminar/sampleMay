@@ -76,7 +76,10 @@ class _homeState extends State<home> {
           color: isSelected ? Colors.pink[100] : Colors.white,
           shape: BoxShape.circle,
           boxShadow: isSelected
-              ? [const BoxShadow(color: Colors.grey, blurRadius: 10, spreadRadius: 1)]
+              ? [
+                  const BoxShadow(
+                      color: Colors.grey, blurRadius: 10, spreadRadius: 1)
+                ]
               : []),
       height: 50,
       width: 50,
@@ -95,10 +98,10 @@ class ScreenMain extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Row(children: [
-          Container(
-            child: const Text('1'),
-          )
-        ]));
+      Container(
+        child: const Text('1'),
+      )
+    ]));
   }
 }
 
@@ -149,14 +152,16 @@ class SearchResult extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 8.0, right: 8, top: 20, bottom: 8),
+            padding:
+                const EdgeInsets.only(left: 8.0, right: 8, top: 20, bottom: 8),
             child: Card(
               elevation: 2,
               child: Container(
                 margin: const EdgeInsets.only(top: 20),
                 width: double.infinity,
                 height: 120,
-                decoration: BoxDecoration(color: Colors.white,
+                decoration: BoxDecoration(
+                  color: Colors.white,
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Column(
@@ -169,56 +174,102 @@ class SearchResult extends StatelessWidget {
                             shape: BoxShape.circle,
                             image: DecorationImage(
                               fit: BoxFit.fill,
-                              image: AssetImage('assets/images/china.jpg'),)
-                        ),
+                              image: AssetImage('assets/images/china.jpg'),
+                            )),
                       ),
-                      title: const Text('Lorem ipsum', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),),
-                      subtitle: Column(children: [
-                        const Text("Too much repetition and padding! duh Anyway, that's how I'd do it. Simple"),
-                        Row(children: const [
-                          Icon(Icons.star,color: Colors.lightGreenAccent,),
-                          Icon(Icons.star,color: Colors.lightGreenAccent,),
-                          Icon(Icons.star,color: Colors.lightGreenAccent,),
-                          Icon(Icons.star,color: Colors.lightGreenAccent,),
-                          Icon(Icons.star_half,color: Colors.lightGreenAccent,),
-                          Text(" 4.5", style: TextStyle(fontSize: 18, color: Colors.black),),
-                          Text('  90\$PH',style: TextStyle(fontSize: 18, color: Colors.black),)
+                      title: const Text(
+                        'Lorem ipsum',
+                        style: TextStyle(
+                            fontSize: 24, fontWeight: FontWeight.bold),
+                      ),
+                      subtitle: Column(
+                        children: [
+                          const Text(
+                              "Too much repetition and padding! duh Anyway, that's how I'd do it. Simple"),
+                          Row(
+                            children: const [
+                              Icon(
+                                Icons.star,
+                                color: Colors.lightGreenAccent,
+                              ),
+                              Icon(
+                                Icons.star,
+                                color: Colors.lightGreenAccent,
+                              ),
+                              Icon(
+                                Icons.star,
+                                color: Colors.lightGreenAccent,
+                              ),
+                              Icon(
+                                Icons.star,
+                                color: Colors.lightGreenAccent,
+                              ),
+                              Icon(
+                                Icons.star_half,
+                                color: Colors.lightGreenAccent,
+                              ),
+                              Text(
+                                " 4.5",
+                                style: TextStyle(
+                                    fontSize: 18, color: Colors.black),
+                              ),
+                              Text(
+                                '  90\$PH',
+                                style: TextStyle(
+                                    fontSize: 18, color: Colors.black),
+                              )
+                            ],
+                          ),
                         ],
-
-                        ),
-                      ],),
+                      ),
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         SizedBox(
                           width: 180,
-                          child: TextButton(onPressed: () {}, child: const Text('PROFILE',style: const TextStyle(color: Colors.black),),
-                            style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.deepOrangeAccent.shade100)),
+                          child: TextButton(
+                            onPressed: () {},
+                            child: const Text(
+                              'PROFILE',
+                              style: const TextStyle(color: Colors.black),
+                            ),
+                            style: ButtonStyle(
+                                backgroundColor: MaterialStateProperty.all(
+                                    Colors.deepOrangeAccent.shade100)),
                           ),
                         ),
                         SizedBox(
                           width: 180,
-                          child: TextButton(onPressed: () {}, child: const Text('HIRE',style: TextStyle(color: Colors.white),),
-                            style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.lightGreenAccent)),
+                          child: TextButton(
+                            onPressed: () {},
+                            child: const Text(
+                              'HIRE',
+                              style: TextStyle(color: Colors.white),
+                            ),
+                            style: ButtonStyle(
+                                backgroundColor: MaterialStateProperty.all(
+                                    Colors.lightGreenAccent)),
                           ),
                         )
-
-                      ],)
+                      ],
+                    )
                   ],
                 ),
               ),
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 8.0, right: 8, top: 8, bottom: 8),
+            padding:
+                const EdgeInsets.only(left: 8.0, right: 8, top: 8, bottom: 8),
             child: Card(
               elevation: 2,
               child: Container(
                 margin: const EdgeInsets.only(top: 20),
                 width: double.infinity,
                 height: 150,
-                decoration: BoxDecoration(color: Colors.white,
+                decoration: BoxDecoration(
+                  color: Colors.white,
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Column(
@@ -231,48 +282,91 @@ class SearchResult extends StatelessWidget {
                             shape: BoxShape.circle,
                             image: const DecorationImage(
                               fit: BoxFit.fill,
-                              image: AssetImage('assets/images/usa.jpg'),)
-                        ),
+                              image: AssetImage('assets/images/usa.jpg'),
+                            )),
                       ),
-                      title: const Text('Lorem ipsum', style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),),
-                      subtitle: Column(children: [
-                        const Text("Too much repetition and padding! duh Anyway, that's how I'd do it. Simple"),
-                        Row(children: const [
-                          Icon(Icons.star,color: Colors.lightGreenAccent,),
-                          Icon(Icons.star,color: Colors.lightGreenAccent,),
-                          Icon(Icons.star,color: Colors.lightGreenAccent,),
-                          Icon(Icons.star,color: Colors.lightGreenAccent,),
-                          Icon(Icons.star_half,color: Colors.lightGreenAccent,),
-                          Text(" 4.5", style: TextStyle(fontSize: 18, color: Colors.black),),
-                          Text('  90\$PH',style: TextStyle(fontSize: 18, color: Colors.black),)
+                      title: const Text(
+                        'Lorem ipsum',
+                        style: const TextStyle(
+                            fontSize: 24, fontWeight: FontWeight.bold),
+                      ),
+                      subtitle: Column(
+                        children: [
+                          const Text(
+                              "Too much repetition and padding! duh Anyway, that's how I'd do it. Simple"),
+                          Row(
+                            children: const [
+                              Icon(
+                                Icons.star,
+                                color: Colors.lightGreenAccent,
+                              ),
+                              Icon(
+                                Icons.star,
+                                color: Colors.lightGreenAccent,
+                              ),
+                              Icon(
+                                Icons.star,
+                                color: Colors.lightGreenAccent,
+                              ),
+                              Icon(
+                                Icons.star,
+                                color: Colors.lightGreenAccent,
+                              ),
+                              Icon(
+                                Icons.star_half,
+                                color: Colors.lightGreenAccent,
+                              ),
+                              Text(
+                                " 4.5",
+                                style: TextStyle(
+                                    fontSize: 18, color: Colors.black),
+                              ),
+                              Text(
+                                '  90\$PH',
+                                style: TextStyle(
+                                    fontSize: 18, color: Colors.black),
+                              )
+                            ],
+                          ),
                         ],
-
-                        ),
-                      ],),
+                      ),
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         SizedBox(
                           width: 180,
-                          child: TextButton(onPressed: () {}, child: const Text('PROFILE',style: TextStyle(color: Colors.black),),
-                            style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.deepOrangeAccent.shade100)),
+                          child: TextButton(
+                            onPressed: () {},
+                            child: const Text(
+                              'PROFILE',
+                              style: TextStyle(color: Colors.black),
+                            ),
+                            style: ButtonStyle(
+                                backgroundColor: MaterialStateProperty.all(
+                                    Colors.deepOrangeAccent.shade100)),
                           ),
                         ),
                         SizedBox(
                           width: 180,
-                          child: TextButton(onPressed: () {}, child: const Text('HIRE',style: const TextStyle(color: Colors.white),),
-                            style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.lightGreenAccent)),
+                          child: TextButton(
+                            onPressed: () {},
+                            child: const Text(
+                              'HIRE',
+                              style: const TextStyle(color: Colors.white),
+                            ),
+                            style: ButtonStyle(
+                                backgroundColor: MaterialStateProperty.all(
+                                    Colors.lightGreenAccent)),
                           ),
                         )
-
-                      ],)
+                      ],
+                    )
                   ],
                 ),
               ),
             ),
           ),
-
         ],
       ),
     );
@@ -307,7 +401,8 @@ class SignUp extends StatelessWidget {
           child: Column(
             children: [
               Container(
-                margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+                margin:
+                    const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
                 decoration: BoxDecoration(
                     boxShadow: const [
                       BoxShadow(
@@ -335,7 +430,8 @@ class SignUp extends StatelessWidget {
                     style: TextStyle(color: Colors.white)),
               ),
               Container(
-                margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+                margin:
+                    const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
                 decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(10),
@@ -363,7 +459,8 @@ class SignUp extends StatelessWidget {
                     style: const TextStyle(color: Colors.black)),
               ),
               Container(
-                margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+                margin:
+                    const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
                 decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(10),
