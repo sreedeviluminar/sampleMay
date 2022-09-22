@@ -3,7 +3,11 @@ import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:samplemay/CourseappUi/main.dart';
 
+void main(){
+  runApp(MaterialApp(home: MyList(),));
+}
 class MyList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

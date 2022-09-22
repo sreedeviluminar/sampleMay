@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(GridViewww());
 }
-
 class GridViewww extends StatelessWidget {
 
 // This widget is the root of your application
@@ -25,7 +24,7 @@ class GridViewww extends StatelessWidget {
           ),
         ),
         body: GridView.count(
-          crossAxisCount: 3,
+          crossAxisCount: 4,
           crossAxisSpacing: 10.0,
           mainAxisSpacing: 10.0,
           shrinkWrap: true,
@@ -38,7 +37,7 @@ class GridViewww extends StatelessWidget {
                     image: NetworkImage('https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'),
                     fit: BoxFit.cover,
                   ),
-                  borderRadius: BorderRadius.all(Radius.circular(10.0),),
+                  borderRadius: BorderRadius.all(Radius.circular(100.0),),
                 ),
               ),
             );

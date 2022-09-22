@@ -11,6 +11,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePage extends State<HomePage> {
+
   String mainProfilePic =
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3tX9GUY0RJdxvyvuX0zIx_PHafgmoLdm5Lg&usqp=CAU";
   String otherProfilePic =
@@ -23,9 +24,7 @@ class _HomePage extends State<HomePage> {
           title: Text("Navigation Drawer"),
         ),
         drawer: Theme(
-            data: Theme.of(context).copyWith(
-              canvasColor: Colors.purple,
-            ),
+            data: Theme.of(context).copyWith(),
             child: Drawer(
                 child: ListView(
               children: <Widget>[
@@ -48,7 +47,6 @@ class _HomePage extends State<HomePage> {
                     trailing: Icon(Icons.menu),
                     onTap: () {
                       Navigator.of(context).pop();
-
                       Navigator.of(context).push(MaterialPageRoute(
                         builder: (BuildContext context) =>
                             OtherPage("Other Page"),

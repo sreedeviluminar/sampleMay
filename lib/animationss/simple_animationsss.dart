@@ -7,8 +7,6 @@ void main() =>
 
 class Page extends StatefulWidget {
   const Page({Key? key}) : super(key: key);
-
-
   @override
   _PageState createState() => _PageState();
 }

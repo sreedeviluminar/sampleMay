@@ -25,11 +25,11 @@ class HomeScreen extends StatelessWidget {
         elevation: 5,
         context: ctx,
         builder: (ctx) => Padding(
-          padding: EdgeInsets.only(
+          padding: const EdgeInsets.only(
               top: 15,
               left: 15,
               right: 15,
-              bottom: MediaQuery.of(ctx).viewInsets.bottom + 15),
+              bottom: 15),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,

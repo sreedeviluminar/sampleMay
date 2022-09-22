@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:samplemay/bottomSheet%20and%20onBoardingScreen/onboardingScreen.dart';
 import 'package:samplemay/login%20reg%20and%20splash%20snack%20alert%20text%20field/MyHomePage.dart';
 import 'package:samplemay/login%20reg%20and%20splash%20snack%20alert%20text%20field/registration.dart';
 
@@ -13,6 +14,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+    appBar: AppBar(),
+
       body: Form(
         key: _form, //assigning key to form
 
@@ -22,7 +25,9 @@ class MyApp extends StatelessWidget {
               padding: EdgeInsets.all(20),
               child: TextFormField(
                 decoration: const InputDecoration(
-                    labelText: 'Email', border: OutlineInputBorder()),
+                    labelText: 'Email',
+                    border: OutlineInputBorder()),
+
                 validator: (text) {
                   if (text == null || !(text.contains('@')) || text.isEmpty) {
                     return "Enter a valid email address!";
@@ -37,7 +42,7 @@ class MyApp extends StatelessWidget {
                 decoration: const InputDecoration(
                     labelText: 'Password', border: OutlineInputBorder()),
                 validator: (text) {
-                  if (text == null || !(text.length <= 5) || text.isEmpty) {
+                  if (text == null || !(text.length <= 6) || text.isEmpty) {
                     return "Enter valid password atmost 5 characters!";
                   }
                   return null;
@@ -48,6 +53,7 @@ class MyApp extends StatelessWidget {
               padding: EdgeInsets.only(left: 50,right: 50),
               child: ElevatedButton(
                   child: Text('Submit'),
+
                   onPressed: () {
                     final isValid = _form.currentState!.validate();
                     if (isValid) {

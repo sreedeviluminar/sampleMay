@@ -1,6 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+void main() {
+  runApp(MyTable());
+}
+
 class MyTable extends StatelessWidget {
   const MyTable({Key? key}) : super(key: key);
 
@@ -8,8 +12,8 @@ class MyTable extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         home: DataTable(
-      columns: const <DataColumn>[
-        DataColumn(
+        columns: const <DataColumn>[
+          DataColumn(
           label: Text(
             'Name',
             style: TextStyle(fontStyle: FontStyle.italic),

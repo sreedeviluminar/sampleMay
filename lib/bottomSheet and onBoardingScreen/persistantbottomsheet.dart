@@ -65,8 +65,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: ElevatedButton(
           child: Text("Close Bottom Sheet"),
           style: ElevatedButton.styleFrom(
-            onPrimary: Colors.white,
-            primary: Colors.green,
+            foregroundColor: Colors.white, backgroundColor: Colors.green,
 
           ),
           onPressed: () {
